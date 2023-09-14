@@ -1,0 +1,150 @@
+*{
+    text-align: center;
+}
+.first {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set the frame to the size of the screen */
+    background-image: url('Group 28.png'); /* Replace 'your-image.jpg' with your image path */
+    background-size: cover; /* Scale the image to cover the entire frame */
+    background-position: center; /* Center the image within the frame */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+.tell{
+ margin:20px;
+ padding: 10px;
+}
+.card-container1,.card-container2,.card-container3 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin:50px;
+    padding-bottom: 20px;
+}
+.card1,.card2,.card3 {
+    width: 400px;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+    transition: transform 0.5s ease; /* Add a smooth transition */
+}
+
+.card1:hover,.card2:hover,.card3:hover {
+    transform: rotateY(180deg); /* Flip the card on hover */
+}
+.card-container1,.card-container2,.card-container3{
+    display:table-cell;
+    padding:50px;
+    padding-top:30px;
+    padding-bottom: 20px;
+}
+.card-front1,
+.card-back1,.card-front2,
+.card-back2,.card-front3,
+.card-back3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hide the backface of the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-front1{
+    background-image: url('knife.png');
+}
+.card-front2{
+    background-image: url('prep.png');
+}
+.card-front3 {
+    background-image: url('safety.png');
+}
+
+.card-back1{
+    background-image: url('knife.png');
+    transform: rotateY(180deg); /* Initially, hide the back of the card */
+}
+.card-back2{
+    background-image: url('prep.png');
+    transform: rotateY(180deg); /* Initially, hide the back of the card */
+}
+.card-back3{
+    background-image: url('safety.png');
+    transform: rotateY(180deg); /* Initially, hide the back of the card */
+}
+
+.card1,.card2,.card3 h2 {
+    color: white;
+}
+
+.card1,.card2,.card3 p {
+    color: rgb(246, 245, 247);
+}
+
+
+
+
+.card {
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+    margin: 20px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blurred-region {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(1px); 
+}
+.dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.dialog-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.close-dialog {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
