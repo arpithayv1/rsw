@@ -110,7 +110,6 @@ h3{
 /* Circular Images Carousel */
 .carousel-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
     margin-top:40px;
